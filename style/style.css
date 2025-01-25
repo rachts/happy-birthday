@@ -4,17 +4,20 @@ html {
 
 body {
   margin: 0;
-  font-family: "Work Sans", sans-serif;
+  font-family: "Work Sans", sans-serif, Arial, sans-serif;
 }
 
 .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
-  width: 100vh;
-  margin: 0 auto;
+  width: 100vw;
   text-align: center;
   visibility: hidden;
-  position: relative;
   overflow: hidden;
+  position: relative;
 }
 
 .container div.six {
@@ -58,7 +61,8 @@ body {
 }
 
 .four .text-box {
-  width: 600px;
+  width: 90%;
+  max-width: 600px;
   margin: 0 auto;
   border: 3px solid #aaa;
   border-radius: 5px;
@@ -83,6 +87,12 @@ body {
   background-color: rgb(21, 161, 237);
   padding: 5px 8px;
   border-radius: 3px;
+  cursor: pointer;
+}
+
+.text-box .fake-btn:hover {
+  background-color: #1e90ff;
+  transition: background-color 0.3s ease;
 }
 
 .five p {
@@ -109,7 +119,7 @@ body {
 }
 
 .idea-6 span {
-  font-size: 15rem;
+  font-size: 10rem;
 }
 
 .six {
@@ -126,8 +136,8 @@ body {
   position: absolute;
   width: 80px;
   top: -35px;
-  left: 41.5%;
-  /* transform: scale(0.1); */
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .baloons img {
@@ -150,8 +160,6 @@ body {
 .eight svg {
   width: 25px;
   position: absolute;
-  top: 0;
-  left: 0;
   visibility: hidden;
   z-index: -1;
 }
@@ -235,48 +243,23 @@ body {
 /* Media Queries */
 @media screen and (max-height: 1000px) {
   .six .hat {
-    left: 40%;
+    width: 70px;
   }
 }
 
 @media screen and (max-height: 800px) {
   .six .hat {
-    left: 37%;
-  }
-}
-
-@media screen and (max-height: 700px) {
-  .six .hat {
-    left: 32%;
-  }
-}
-
-@media screen and (max-height: 850px) and (max-width: 450px) {
-  .six .hat {
-    left: 32%;
+    width: 60px;
   }
 }
 
 @media screen and (max-width: 500px) {
-  .container {
-    width: 90%;
-  }
-
-  .four .text-box {
-    width: 90%;
-  }
-
-  .text-box .fake-btn {
-    right: 5px;
-    bottom: -38px;
-  }
-
   .idea-5 span {
     display: block;
   }
 
   .idea-6 span {
-    font-size: 10rem;
+    font-size: 8rem;
   }
 
   .six .hat {
@@ -294,6 +277,5 @@ body {
 
   .nine p {
     font-size: 1.5rem;
-    font-weight: lighter;
   }
 }
